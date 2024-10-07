@@ -1,131 +1,191 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Lost and Found</h1>
 
-Welcome USER_NAME,
+The Campus Lost & Found platform aims to help students and staff easily report, search for, and recover lost items on campus. The platform streamlines the process of connecting individuals who have lost belongings with those who may have found them, ensuring quick and effective item recovery.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Target Audience:
+- Students: Those who have lost items and want to report them or search for found items.
+- Finders: Individuals who have found items and want to report them to return to the rightful owner.
+- Campus Administration: Admins can monitor reports, moderate activity, and assist in the recovery of valuable or sensitive items.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
 
-## Gitpod Reminders
+[Live project](https:///)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Admin Username: 
 
-`python3 -m http.server`
+Password: 
 
-A blue button should appear to click: _Make Public_,
+[Project Board](https://)
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### User Stories
 
-A blue button should appear to click: _Make Public_,
+#### User Story 1:  
 
-Another blue button should appear to click: _Open Browser_.
+- As a student, I want to create an account so I can report lost or found items.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Acceptance Criteria:
 
-To log into the Heroku toolbelt CLI:
+  1. The user can fill out a form with details about the lost item (description, date, location) and submit it. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### User Story 2: 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- As a student, I want to report a lost item so I can try to recover it quickly.
 
-### Connecting your Mongo database
+- Acceptance Criteria:
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+  1. The user can fill out a form with details about the lost item (description, date, location) and submit it.
 
-------
+#### User Story 3: 
 
-## Release History
+- As a student, I want to report a found item so that it can be returned to the owner.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Acceptance Criteria:
 
-**June 18, 2024,** Add Mongo back into template
+  1. The user can submit details about the found item (item_name, date, location) via a form.
+ 
+#### User Story 4: 
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+- As a student, I want to search for lost or found items so I can see if my lost item has been reported (nice-to-have feature).
 
-**May 28 2024:** Fix Mongo and Links installs
+- Acceptance Criteria:
 
-**April 26 2024:** Update node version to 16
+  1. The user can search and filter items by keyword.
 
-**September 20 2023:** Update Python version to 3.9.17.
+#### User Story 5:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- As a student, I want to receive a notification when an item matching my lost item description is reported as found (nice-to-have feature).
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Acceptance Criteria:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  1. The user receives an email notification or platform notification when an item with similar characteristics is reported.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### User Story 6: 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- As a user, I want to message the finder of a reported item so I can coordinate returning the lost item.
+  
+- Acceptance Criteria:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  1. The user can send and receive private messages to the person who posted a lost or found report.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### User Story 7: 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- As a student, I want to mark my lost item as recovered once it has been found.
+  
+- Acceptance Criteria:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  1. The user can update the status of their lost item report to “recovered” once they’ve gotten it back.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### User Story 8: 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- As an admin, I want to moderate posts so that inappropriate or false reports are removed.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- Acceptance Criteria:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  1. Admins can view, edit, or delete reports to ensure quality control and prevent misuse of the platform.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+### Accessibility 
 
-## FAQ about the uptime script
+## Design
 
-**Why have you added this script?**
+### Colour Scheme 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Typography
 
-**How will this affect me?**
+### Imagery
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Wireframes
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Existing Features 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+#### Home Page
 
-**So….?**
+- Hero Section: 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- Navigation Bar: 
 
-**Can I opt out?**
+- Footer: Contains links to  social media profiles.
+  
+#### Other pages
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Future Features
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Data Models
 
-**Anything more?**
+### Item Model:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<img width="319" alt="Item_Model_Table" src="https://github.com/user-attachments/assets/eb64eb9a-98e8-4bf1-9694-93b71eafd149">
 
----
+### Comment Model:
 
-Happy coding!
+<img width="317" alt="Comment_Model_Table" src="https://github.com/user-attachments/assets/f2cc923f-22ac-4553-95dc-9d7574bef8e6">
+
+### User Model:
+
+<img width="476" alt="User_Model_Table" src="https://github.com/user-attachments/assets/3725fd94-1f40-48cb-99c3-89c983378691">
+
+- The User model is provided by Django.
+
+### Relationships:
+
+#### User <-> Item:
+
+- A one-to-many relationship where a user can report multiple items (either lost or found).
+
+- id in the User model references user_id in the Item model.
+
+#### User <-> Comment:
+
+- A one-to-many relationship where a user can post multiple comments, but each comment is associated with only one user.
+
+- 	id in the User model references user_id in the Comment model.
+
+ #### Item <-> Comment:
+
+- A one-to-many relationship where each item can have multiple comments, stored in the comment-content field in the Item model. Each item (identified by item_id) can have multiple comments stored in comment_content.
+
+- id in the Item model references item_id in the Comment model
+
+### ER Diagram
+
+![ERD](https://github.com/user-attachments/assets/bca66b30-91f3-4826-87a8-65385c85d83d)
+
+## Technologies Used 
+
+## Agile Methodology 
+
+[Project Board](https://)
+
+Agile methodology was implemented throughout the development of this project, providing an iterative and flexible approach to software development.
+
+The process was structured using GitHub’s Project Board, which employed a Kanban-style system to manage the user stories and their progress.
+
+## Deployment
+
+## Testing
+
+### Validation of HTML, CSS, JS, and Python Code
+Validation tools used are [Nu HTML Checker](https://validator.w3.org/nu/), [Jigsaw](https://jigsaw.w3.org/css-validator/), [JSHint](https://jshint.com/), [PEP8 codeInst](https://pep8ci.herokuapp.com) and [Python Syntax Checker](https://extendsclass.com/python-tester.html).
+
+#### HTML Validation
+
+#### CSS Validation
+
+#### Javascript Validation
+
+#### Python Validation
+
+### Manual Testing 
+
+### Responsive Design
+
+### Cross-Browser Compatibility Testing
+
+The website was tested across multiple web browsers, including Chrome, Edge, and Firefox, to ensure cross-browser compatibility. All features, including navigation, user interactions, and responsiveness, performed as expected, with no display or functionality issues observed. This confirms that the website delivers a consistent user experience across these major browsers.
+
+## Credits 
+
+
+
+

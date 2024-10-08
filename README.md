@@ -20,7 +20,7 @@ Password:
 
 ### User Stories
 
-#### User Story 1:  
+#### User Story: User Account Creation and Authentication
 
 - As a student, I want to create an account so I can report lost or found items.
 
@@ -28,7 +28,7 @@ Password:
 
   1. The user can fill out a form with details about the lost item (description, date, location) and submit it. 
 
-#### User Story 2: 
+#### User Story: Report Found Item
 
 - As a student, I want to report a lost item so I can try to recover it quickly.
 
@@ -36,7 +36,7 @@ Password:
 
   1. The user can fill out a form with details about the lost item (description, date, location) and submit it.
 
-#### User Story 3: 
+#### User Story: Report Found Item
 
 - As a student, I want to report a found item so that it can be returned to the owner.
 
@@ -44,7 +44,7 @@ Password:
 
   1. The user can submit details about the found item (item_name, date, location) via a form.
  
-#### User Story 4: 
+#### User Story: Search Lost and Found Items (nice-to-have feature)
 
 - As a student, I want to search for lost or found items so I can see if my lost item has been reported (nice-to-have feature).
 
@@ -52,15 +52,15 @@ Password:
 
   1. The user can search and filter items by keyword.
 
-#### User Story 5:
+#### User Story: Item Match Notification (nice-to-have feature ?) 
 
-- As a student, I want to receive a notification when an item matching my lost item description is reported as found (nice-to-have feature).
+- As a student, I want to receive a notification when an item matching my lost item description is reported as found, so I can be alerted and take action to recover it (nice-to-have feature).
 
 - Acceptance Criteria:
 
   1. The user receives an email notification or platform notification when an item with similar characteristics is reported.
 
-#### User Story 6: 
+#### User Story: Message Finder/Loser
 
 - As a user, I want to message the finder of a reported item so I can coordinate returning the lost item.
   
@@ -68,15 +68,15 @@ Password:
 
   1. The user can send and receive private messages to the person who posted a lost or found report.
 
-#### User Story 7: 
+#### User Story: Mark Item as Recovered
 
-- As a student, I want to mark my lost item as recovered once it has been found.
+- As a student, I want to mark my lost item as recovered once it has been found, so that the report is updated and no further search or notifications are needed.
   
 - Acceptance Criteria:
 
   1. The user can update the status of their lost item report to “recovered” once they’ve gotten it back.
 
-#### User Story 8: 
+#### User Story: Admin Moderation
 
 - As an admin, I want to moderate posts so that inappropriate or false reports are removed.
 
@@ -105,7 +105,7 @@ Password:
 
 - Navigation Bar: 
 
-- Footer: Contains links to  social media profiles.
+- Footer: Contains links to social media profiles.
   
 #### Other pages
 

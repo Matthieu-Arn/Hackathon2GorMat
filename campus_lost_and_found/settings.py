@@ -16,7 +16,6 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x6!7(h8vsbfmzb4jmb+(w9qw*cof0iklsl46fer!$b2d6uumc$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-matthieuarn-hackathon2g-oqr7eyixn88.ws.codeinstitute-ide.net', '8000-matthieuarn-hackathon2g-vrvihbhitak.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -42,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'items',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,23 +77,9 @@ WSGI_APPLICATION = 'campus_lost_and_found.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-matthieuarn-hackathon2g-oqr7eyixn88.ws.codeinstitute-ide.net",
-    "https://8000-matthieuarn-hackathon2g-vrvihbhitak.ws.codeinstitute-ide.net",
-    "https://*.codeinstitute-ide.net/",
-    "https://*.herokuapp.com"
-]
 
 
 # Password validation

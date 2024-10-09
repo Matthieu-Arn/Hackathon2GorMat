@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here
+
 class Item(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # User who reported the item
     public_description = models.CharField(max_length=100)  # Two-word public description

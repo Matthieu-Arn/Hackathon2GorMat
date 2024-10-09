@@ -21,17 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = [
-    '8000-matthieuarn-hackathon2g-oqr7eyixn88.ws.codeinstitute-ide.net',
-    '8000-matthieuarn-hackathon2g-vrvihbhitak.ws.codeinstitute-ide.net',
+    '.codeinstitute-ide.net',
     '.herokuapp.com'
 ]
 
@@ -89,6 +85,12 @@ DATABASES = {
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*.herokuapp.com"
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -8,7 +8,7 @@ from django.contrib import messages
 
 # Index page
 def indexpage(request):
-    return render(request, 'items/index.html') 
+    return render(request, 'items/index.html')
 
 # Report lost/found item
 @login_required

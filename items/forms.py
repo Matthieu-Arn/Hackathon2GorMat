@@ -16,7 +16,7 @@ class ItemForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['comment_content']
+        fields = ['content']
         widgets = {
-            'comment_content': forms.Textarea(attrs={'rows': 3, 'class': 'form-control', 'placeholder': 'Add your comment'}),
+            'content': forms.Textarea(attrs={'rows': 3, 'class': 'form-control', 'placeholder': 'Add your comment'}),
         }

@@ -6,6 +6,10 @@ from django.contrib import messages
 
 # Create your views here.
 
+# Index page
+def indexpage(request):
+    return render(request, 'items/index.html')
+
 # Report lost/found item
 @login_required
 def create_item_view(request):

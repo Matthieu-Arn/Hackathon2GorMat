@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+
 urlpatterns = [
     path('', views.indexpage, name='home'),
     path('create/', views.create_item_view, name='create_item'),

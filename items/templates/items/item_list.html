@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Items{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="section-title">Lost & Found Items</h2>
+    <div class="item-grid">
+        {% for item in items %}
+        <div class="item-card">
+            <div class="item-info">
+                <h3>Item #{{ item.id }}</h3>
+                <p>Status: {{ item.status }}</p>
+                <p>Object: {{ item.public_description }}</p>
+                <p>Date: {{ item.date_reported }}</p>
+            </div>
+            <div class="item-actions">
+                <a href="{% url 'add_comment' item.id %}" class="btn">Comment</a>
+                {% if item.user == user and not item.resolved %}
+                <a href="{% url 'mark_as_recovered' item.id %}" class="btn">Mark as Recovered</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if items.has_previous %}
+        <a href="?page={{ items.previous_page_number }}"><< Previous</a>
+        {% endif %}
+        <span>Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
+        {% if items.has_next %}
+        <a href="?page={{ items.next_page_number }}">Next >></a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

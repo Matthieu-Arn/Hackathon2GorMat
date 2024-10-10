@@ -21,4 +21,5 @@ urlpatterns = [
     # path("", include("items.urls"), name="items-urls"),
     path('admin/', admin.site.urls),
     path('items/', include('items.urls')),
+    path('summernote/', include('summernote.urls')),
 ]

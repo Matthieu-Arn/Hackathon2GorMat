@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Username input -->
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <!-- Include the next parameter to redirect correctly after login -->
+        <input type="hidden" name="next" value="{{ next }}">
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+</div>
+
+{% endblock %}

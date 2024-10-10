@@ -1,21 +1,33 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
-    
-    
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+<div class="d-flex justify-content-center align-items-center vh-50">
+    <div class="bg-light p-5 rounded text-center" style="opacity: 0.8; width: 100%; max-width: 900px;">
+        <h1 class="display-1">Campus Lost & Found</h1>
+        <p class="lead">Where Lost Meets Found, Campus Style!</p>
+        <a href="#" class="btn btn-primary btn-lg mx-2">Browse Items</a>
+        <a href="#" class="btn btn-success btn-lg mx-2">Report Item</a>
+    </div>
 </div>
 
-<!-- index.html content ends here -->
+<!-- Explanation paragraph styled similarly to the title banner -->
+<div class="d-flex justify-content-center mt-3">
+    <div class="bg-light p-5 rounded text-center" style="opacity: 0.8; width: 100%; max-width: 900px;">
+        <p class="lead" style="font-size: 1.0rem;">
+            <strong>Welcome to the Campus Lost & Found platform!</strong> <br> 
+            Here, students and staff can easily report lost items and browse through items submitted by others. <br>
+            If you have misplaced something, simply click the "Report Item" button to fill out a quick form. Alternatively, 
+            you can check out the "Browse Items" section to see if your lost item has been turned in. <br>
+            Our goal is to create a supportive community where everyone can help each other find their belongings.
+        </p>
+    </div>
+</div>
+
+
+
 {% endblock %}
+

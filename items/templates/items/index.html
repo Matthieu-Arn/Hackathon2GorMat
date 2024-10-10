@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="bg-light p-5 rounded-lg text-center">
-    <h1 class="display-4">Campus Lost & Found</h1>
-    <p class="lead">Where Lost Meets Found, Campus Style!</p>
-    <a href="#" class="btn btn-primary btn-lg mx-2">Report Lost Item</a>
-    <a href="#" class="btn btn-success btn-lg mx-2">Claim Found Item</a>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="bg-light p-5 rounded text-center" style="opacity: 0.9;">
+        <h1 class="display-1">Campus Lost & Found</h1>
+        <p class="lead">Where Lost Meets Found, Campus Style!</p>
+        <a href="#" class="btn btn-primary btn-lg mx-2">Browse Items</a>
+        <a href="#" class="btn btn-success btn-lg mx-2">Report Item</a>
+    </div>
 </div>
 
-
-
-
-
-<!-- index.html content ends here -->
 {% endblock %}
 

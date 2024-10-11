@@ -8,13 +8,17 @@ Target Audience:
 - Campus Administration: Admins can monitor reports, moderate activity, and assist in the recovery of valuable or sensitive items.
 
 
-[Live project](https:///)
+The page is deployed here: https://campuslostandfound-e8d51102f91c.herokuapp.com/ <br>
+The project board is available at: https://github.com/users/Matthieu-Arn/projects/8
 
-Admin Username: 
+Admin Username: CampusAdmin <br>
+Password: u!2tX2cB7
 
-Password: 
+<img src="documentation/responsiveness/AmIResponsive Campus Lost-Found.jpg" width="700" alt="Am I Reponsive output for the Campus Lost &amp; Found application">
 
-[Project Board](https://)
+<br>
+
+
 
 ## User Experience (UX)
 

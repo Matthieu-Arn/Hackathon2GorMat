@@ -23,6 +23,7 @@ body {
 .navbar {
     background-color: #4caf50;
     padding: 15px;
+    color: white;
 }
 
 .navbar .brand {
@@ -35,16 +36,23 @@ body {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    color: white;
 }
 
 .navbar .nav-links li {
     margin-left: 20px;
+    color: white;
 }
 
 .navbar .nav-links a {
     color: white;
     text-decoration: none;
 }
+
+.nav-item {
+    color: red;
+}
+
 
 /* Hero Section Styles */
 .hero {

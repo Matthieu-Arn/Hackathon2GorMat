@@ -92,14 +92,27 @@ Password: u!2tX2cB7
 ### Accessibility 
 
 ## Design
+- Closely matched to LMS material
 
 ### Colour Scheme 
+- Earthy Tones, where green represents safety and healing, making it a fitting choice for lost and found services, while cream is warm and inviting, enhancing the user experience.
+	Green also rovides a natural feel while still being easy on the eyes.
 
 ### Typography
+- Neutral: choice of a Sans-serif font (Roboto) as it is clean and easy to read across various devices and screen sizes.
 
 ### Imagery
+- Kept to a minimum, sourced from pixabay.com
 
 ### Wireframes
+- Wireframes were created in Balsamiq prior to development, in order to gauge proportions and overall organisations of the pages
+
+<img src="documentation/wireframes/1.Home.jpg" width="500" alt="">
+<img src="documentation/wireframes/2.Paginated List.jpg" width="500" alt="">
+<img src="documentation/wireframes/3.Detailed Item Page.jpg" width="500" alt="">
+<img src="documentation/wireframes/4.Report Form.jpg" width="500" alt="">
+<img src="documentation/wireframes/5.User Page.jpg" width="500" alt="">
+
 
 ### Existing Features 
 

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ item.public_description }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Item Details</h2>
+    <div class="item-card">
+        <h3>{{ item.public_description }}</h3>
+        <p><strong>Status:</strong> {{ item.status }}</p>
+        <p><strong>Description:</strong> {{ item.full_description }}</p>
+        <p><strong>Date Reported:</strong> {{ item.date_reported }}</p>
+        <p><strong>Location:</strong> {{ item.location }}</p>
+        <p><strong>Resolved:</strong> {% if item.resolved %}Yes{% else %}No{% endif %}</p>
+    </div>
+
+    <div class="item-actions mt-4">
+        {% if item.user == request.user %}
+        <a href="{% url 'mark_as_recovered' item.id %}" class="btn btn-success">Mark as Recovered</a>
+        {% endif %}
+        <a href="{% url 'add_comment' item.id %}" class="btn btn-primary">Add Comment</a>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comments-section mt-5">
+        <h3>Comments</h3>
+        {% if comments %}
+            {% for comment in comments %}
+            <div class="comment my-3 p-3 border rounded">
+                <p><strong>{{ comment.user.username }}:</strong></p>
+                <p>{{ comment.content }}</p>
+                <small class="text-muted">{{ comment.timestamp }}</small>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No comments have been added yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

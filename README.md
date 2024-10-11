@@ -95,36 +95,41 @@ Password: u!2tX2cB7
 - Closely matched to LMS material
 
 ### Colour Scheme 
-- Earthy Tones, where green represents safety and healing, making it a fitting choice for lost and found services, while cream is warm and inviting, enhancing the user experience.
+ - Earthy Tones, where green represents safety and healing, making it a fitting choice for lost and found services, while cream is warm and inviting, enhancing the user experience.
 	Green also rovides a natural feel while still being easy on the eyes.
 
 ### Typography
-- Neutral: choice of a Sans-serif font (Roboto) as it is clean and easy to read across various devices and screen sizes.
+ - Neutral: choice of a Sans-serif font (Roboto) as it is clean and easy to read across various devices and screen sizes.
 
 ### Imagery
-- Kept to a minimum, sourced from pixabay.com
+ - Kept to a minimum, sourced from pixabay.com
 
 ### Wireframes
-- Wireframes were created in Balsamiq prior to development, in order to gauge proportions and overall organisations of the pages
+ - Wireframes were created in Balsamiq prior to development, in order to gauge proportions and overall organisations of the pages
 
-<img src="documentation/wireframes/1.Home.jpg" width="500" alt="">
-<img src="documentation/wireframes/2.Paginated List.jpg" width="500" alt="">
-<img src="documentation/wireframes/3.Detailed Item Page.jpg" width="500" alt="">
-<img src="documentation/wireframes/4.Report Form.jpg" width="500" alt="">
-<img src="documentation/wireframes/5.User Page.jpg" width="500" alt="">
+<img src="documentation/wireframes/1.Home.jpg" width="500" alt="Home page">
+<img src="documentation/wireframes/2.Paginated List.jpg" width="500" alt="Paginated list of found/lost items">
+<img src="documentation/wireframes/3.Detailed Item Page.jpg" width="500" alt="Detailed single item page with com ment section (login required)">
+<img src="documentation/wireframes/4.Report Form.jpg" width="500" alt="Form to report a lost or found item (login required)">
+<img src="documentation/wireframes/5.User Page.jpg" width="500" alt="Page summarising user activity (items and messages) (login required)">
 
 
 ### Existing Features 
 
 #### Home Page
 
-- Hero Section: 
+- Hero Section: Quick access buttons to "browse items" and "report item" sections
 
-- Navigation Bar: 
+- Navigation Bar: Quick access to all pages on the site and login/logout functionalities
 
 - Footer: Contains links to social media profiles.
   
 #### Other pages
+
+- Paginated list of lost/found items (accessible to all)
+- Detailed single item page with com ment section (login required)
+- Form to report a lost or found item (login required)
+- Page summarising user activity (items and messages) (login required)
 
 ### Future Features
 
@@ -185,6 +190,8 @@ The process was structured using GitHub’s Project Board, which employed a Kanb
 ### Validation of HTML, CSS, JS, and Python Code
 Validation tools used are [Nu HTML Checker](https://validator.w3.org/nu/), [Jigsaw](https://jigsaw.w3.org/css-validator/), [JSHint](https://jshint.com/), [PEP8 codeInst](https://pep8ci.herokuapp.com) and [Python Syntax Checker](https://extendsclass.com/python-tester.html).
 
+Validation yet to be implemented
+
 #### HTML Validation
 
 #### CSS Validation
@@ -202,7 +209,7 @@ Validation tools used are [Nu HTML Checker](https://validator.w3.org/nu/), [Jigs
 The website was tested across multiple web browsers, including Chrome, Edge, and Firefox, to ensure cross-browser compatibility. All features, including navigation, user interactions, and responsiveness, performed as expected, with no display or functionality issues observed. This confirms that the website delivers a consistent user experience across these major browsers.
 
 ## Credits 
-
+Picture: pixabay.com
 
 
 

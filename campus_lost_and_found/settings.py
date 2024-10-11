@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'items',
     'users',
+    'django_summernote',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

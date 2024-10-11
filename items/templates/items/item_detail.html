@@ -3,35 +3,42 @@
 {% block title %}{{ item.public_description }}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>Item Details</h2>
-    <div class="item-card">
-        <h3>{{ item.public_description }}</h3>
-        <p><strong>Status:</strong> {{ item.status }}</p>
-        <p><strong>Description:</strong> {{ item.full_description }}</p>
-        <p><strong>Date Reported:</strong> {{ item.date_reported }}</p>
-        <p><strong>Location:</strong> {{ item.location }}</p>
-        <p><strong>Resolved:</strong> {% if item.resolved %}Yes{% else %}No{% endif %}</p>
-    </div>
+<div class="container my-4">
+    <!-- Item Details Section -->
+    <h2 class="mb-4">Item Details</h2>
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">{{ item.public_description }}</h3>
+            <p class="card-text"><strong>Status:</strong> {{ item.status }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ item.full_description }}</p>
+            <p class="card-text"><strong>Date Reported:</strong> {{ item.date_reported }}</p>
+            <p class="card-text"><strong>Location:</strong> {{ item.location }}</p>
+            <p class="card-text"><strong>Resolved:</strong> 
+                {% if item.resolved %}Yes{% else %}No{% endif %}
+            </p>
+        </div>
 
-    <div class="item-actions mt-4">
-        {% if item.user == request.user %}
-        <a href="{% url 'mark_as_recovered' item.id %}" class="btn btn-success">Mark as Recovered</a>
-        {% endif %}
-        <a href="{% url 'add_comment' item.id %}" class="btn btn-primary">Add Comment</a>
+        <!-- Actions (Mark as Recovered and Add Comment) -->
+        <div class="card-footer d-flex justify-content-between">
+            {% if item.user == request.user and not item.resolved %}
+            <a href="{% url 'mark_as_recovered' item.id %}" class="btn btn-success">Mark as Recovered</a>
+            {% endif %}
+            <a href="{% url 'add_comment' item.id %}" class="btn btn-primary">Add Comment</a>
+        </div>
     </div>
 
     <!-- Comments Section -->
-    <div class="comments-section mt-5">
+    <div class="mt-5">
         <h3>Comments</h3>
         {% if comments %}
-            {% for comment in comments %}
-            <div class="comment my-3 p-3 border rounded">
-                <p><strong>{{ comment.user.username }}:</strong></p>
-                <p>{{ comment.content }}</p>
-                <small class="text-muted">{{ comment.timestamp }}</small>
-            </div>
-            {% endfor %}
+            <ul class="list-group">
+                {% for comment in comments %}
+                <li class="list-group-item my-2">
+                    <strong>{{ comment.user.username }}:</strong> {{ comment.content }}
+                    <div class="text-muted small mt-1">{{ comment.timestamp|date:"F j, Y, g:i a" }}</div>
+                </li>
+                {% endfor %}
+            </ul>
         {% else %}
             <p>No comments have been added yet.</p>
         {% endif %}

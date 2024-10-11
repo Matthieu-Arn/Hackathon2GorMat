@@ -132,6 +132,8 @@ Password: u!2tX2cB7
 - Page summarising user activity (items and messages) (login required)
 
 ### Future Features
+- Bug fixing
+- Improved user feedback when logging in / out
 
 ## Data Models
 
@@ -177,20 +179,22 @@ Password: u!2tX2cB7
 
 ## Agile Methodology 
 
-[Project Board](https://)
+[Project Board](https://https://github.com/users/Matthieu-Arn/projects/8)
 
 Agile methodology was implemented throughout the development of this project, providing an iterative and flexible approach to software development.
 
 The process was structured using GitHub’s Project Board, which employed a Kanban-style system to manage the user stories and their progress.
 
 ## Deployment
+  - The site was deployed from the early stages of development using GitHub and Heroku
+  - The live site can be found at: https://campuslostandfound-e8d51102f91c.herokuapp.com/
 
 ## Testing
 
+Validation yet to be fully implemented
+
 ### Validation of HTML, CSS, JS, and Python Code
 Validation tools used are [Nu HTML Checker](https://validator.w3.org/nu/), [Jigsaw](https://jigsaw.w3.org/css-validator/), [JSHint](https://jshint.com/), [PEP8 codeInst](https://pep8ci.herokuapp.com) and [Python Syntax Checker](https://extendsclass.com/python-tester.html).
-
-Validation yet to be implemented
 
 #### HTML Validation
 
@@ -207,6 +211,9 @@ Validation yet to be implemented
 ### Cross-Browser Compatibility Testing
 
 The website was tested across multiple web browsers, including Chrome, Edge, and Firefox, to ensure cross-browser compatibility. All features, including navigation, user interactions, and responsiveness, performed as expected, with no display or functionality issues observed. This confirms that the website delivers a consistent user experience across these major browsers.
+
+### KNown Bugs
+ - Redirection error when logged out and clicking on "Report Item": should direct towards the login/signup page
 
 ## Credits 
 Picture: pixabay.com

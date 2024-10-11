@@ -28,6 +28,12 @@ def item_list_view(request):
     items = Item.objects.all()
     return render(request, 'items/item_list.html', {'items': items})
 
+# View individual item details
+def item_detail_view(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    comments = item.comment_set.all()
+    return render(request, 'items/item_detail.html', {'item': item, 'comments': comments})
+
 # Mark item as recovered
 @login_required
 def mark_as_recovered_view(request, item_id):
@@ -52,7 +58,7 @@ def add_comment_view(request, item_id):
             comment.user = request.user
             comment.save()
             messages.success(request, "Comment added!")
-            return redirect('item_list')
+            return redirect('item_detail', item_id=item.id)
     else:
         form = CommentForm()
     return render(request, 'items/add_comment.html', {'form': form, 'item': item})

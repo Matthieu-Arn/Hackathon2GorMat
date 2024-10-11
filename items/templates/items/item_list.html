@@ -14,7 +14,9 @@
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Item #{{ item.id }}</h5>
+                    <h5 class="card-title">
+                        <a href="{% url 'item_detail' item.id %}">Item #{{ item.id }}</a> <!-- Link to item details -->
+                    </h5>
                     <p class="card-text">Status: {{ item.status }}</p>
                     <p class="card-text">Object: {{ item.public_description }}</p>
                     <p class="card-text">Date: {{ item.date_reported }}</p>
@@ -57,4 +59,5 @@
         </ul>
     </nav>
 </div>
+
 {% endblock %}

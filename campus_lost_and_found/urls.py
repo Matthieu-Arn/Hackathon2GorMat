@@ -23,6 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('items/', include('items.urls')),
     path('summernote/', include('django_summernote.urls')),
+<<<<<<< HEAD
+=======
     path('users/', include('users.urls')),
     path('', item_views.indexpage, name='home')  
+>>>>>>> main
 ]

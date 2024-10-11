@@ -1,4 +1,10 @@
 {% load static %}
+<<<<<<< HEAD
+
+{% url 'home' as home_url %}
+=======
+>>>>>>> main
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +17,8 @@
     
     <title>Campus Lost &amp; Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <!-- {% load static %} -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 
     <!-- Google Fonts CSS -->
@@ -32,6 +38,10 @@
     {% block extra_css %}{% endblock %}
 </head>
 
+<<<<<<< HEAD
+<!-- <body class="d-flex flex-column h-100 main-bg" style="background-color: #F5F5DC"> -->
+<body class="d-flex flex-column h-100 main-bg" style="background-color: #F5F5DC; background-image: url('/static/images/background2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; min-height: 100vh;">
+=======
 <body>
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,6 +52,7 @@
 
 <body class="d-flex flex-column h-100 main-bg" style="background-color: #F5F5DC">
 
+>>>>>>> main
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2E5D34">
         <div class="container-fluid">
@@ -90,9 +101,18 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
+    <main class="flex-shrink-0 main-bg" style="padding-top: 30px; padding-bottom: 30px;">
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+=======
     <!-- Main content block -->
     <main class="container">
         {% block content %}{% endblock %}
+>>>>>>> main
     </main>
 
     <!-- Footer -->

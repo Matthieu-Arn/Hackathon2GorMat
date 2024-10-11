@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from items import views as item_views
 
 urlpatterns = [
-    # path("", include("items.urls"), name="items-urls"),
+
     path('admin/', admin.site.urls),
     path('items/', include('items.urls')),
-    path('summernote/', include('summernote.urls')),
+    path('summernote/', include('django_summernote.urls')),
+    path('users/', include('users.urls')),
+    path('', item_views.indexpage, name='home')  
 ]

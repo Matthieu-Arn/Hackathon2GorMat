@@ -4,10 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F5F5DC;
-    /* background-image: url('/workspace/Hackathon2GorMat/static/images/background2.jpg');
+    /* background-image: url('static/images/background2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; */
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh; */
 }
 
 .container {

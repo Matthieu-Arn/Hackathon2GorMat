@@ -2,41 +2,59 @@
 
 {% load static %}
 
-
 {% block title %}Items{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2 class="section-title">Lost & Found Items</h2>
-    <div class="item-grid">
+<div class="container my-4">
+    <h2 class="section-title mb-4">Lost & Found Items</h2>
+    
+    <!-- Item Grid -->
+    <div class="row">
         {% for item in items %}
-        <div class="item-card">
-            <div class="item-info">
-                <h3>Item #{{ item.id }}</h3>
-                <p>Status: {{ item.status }}</p>
-                <p>Object: {{ item.public_description }}</p>
-                <p>Date: {{ item.date_reported }}</p>
-            </div>
-            <div class="item-actions">
-                <a href="{% url 'add_comment' item.id %}" class="btn">Comment</a>
-                {% if item.user == user and not item.resolved %}
-                <a href="{% url 'mark_as_recovered' item.id %}" class="btn">Mark as Recovered</a>
-                {% endif %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Item #{{ item.id }}</h5>
+                    <p class="card-text">Status: {{ item.status }}</p>
+                    <p class="card-text">Object: {{ item.public_description }}</p>
+                    <p class="card-text">Date: {{ item.date_reported }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{% url 'add_comment' item.id %}" class="btn btn-primary">Comment</a>
+                    {% if item.user == user and not item.resolved %}
+                    <a href="{% url 'mark_as_recovered' item.id %}" class="btn btn-success">Mark as Recovered</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
+        {% empty %}
+        <p>No items found.</p>
         {% endfor %}
     </div>
 
     <!-- Pagination -->
-    <div class="pagination">
-        {% if items.has_previous %}
-        <a href="?page={{ items.previous_page_number }}"><< Previous</a>
-        {% endif %}
-        <span>Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
-        {% if items.has_next %}
-        <a href="?page={{ items.next_page_number }}">Next >></a>
-        {% endif %}
-    </div>
-</div>
+    <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+            {% if items.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ items.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo; Previous</span>
+                </a>
+            </li>
+            {% endif %}
 
+            <li class="page-item disabled">
+                <span class="page-link">Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
+            </li>
+
+            {% if items.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">Next &raquo;</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
 {% endblock %}

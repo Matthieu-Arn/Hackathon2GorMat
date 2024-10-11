@@ -35,50 +35,58 @@
     {% block extra_css %}{% endblock %}
 </head>
 
-<!-- <body class="d-flex flex-column h-100 main-bg" style="background-color: #F5F5DC"> -->
+
+
+
+
 <body class="d-flex flex-column h-100 main-bg" style="background-color: #F5F5DC; background-image: url('/static/images/background2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; min-height: 100vh;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2E5D34">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand" style="color: white">Campus Lost &amp; Found</span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand" style="color: #F5F5DC">Campus Lost &amp; Found</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="{% url 'item_list' %}">View Items</a>
-
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" style="color: white" aria-current="page"
-                            href="#">Home</a>
-
-                    </li>
+                <ul class="navbar-nav ms-auto" style="color: #F5F5DC">
                     {% if user.is_authenticated %}
+                    <!--  -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'create_item' %}">Report Item</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" style="color: #F5F5DC" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
+                    <!--  -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-link" href="{% url 'item_list' %}" style="color: #F5F5DC">View Items</a>
                     </li>
+                                        <!--  -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'create_item' %}" style="color: #F5F5DC">Report Item</a>
+                    </li>
+                    <!--  -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}" style="color: #F5F5DC">Profile</a>
+                    </li>
+                    <!--  -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}" style="color: #F5F5DC">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                        <a class="nav-link" href="{% url 'login' %}" style="color: #F5F5DC">Login</a>
                     </li>
+                    <!--  -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'signup' %}">Signup</a>
+                        <a class="nav-link" href="{% url 'signup' %}" style="color: #F5F5DC">Signup</a>
                     </li>
                     {% endif %}
                 </ul>
 
-
-                <span class="navbar-text text-muted">
-                    <em style="color: white">Where lost meets found</em>
+                <div class="flex-grow-1"></div>
+                <span class="navbar-text ms-auto">
+                    <em style="color: #F5F5DC">Where lost meets found</em>
                 </span>
 
             </div>
@@ -95,14 +103,7 @@
 
     <!-- Footer -->
 
-    <footer class="footer bg-light text-center py-4">
-        <div class="container">
-            <p>Campus Lost & Found &copy; 2024. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-
-    <footer class="footer mt-auto py-3" style="background-color: #4A6A31;">
+    <footer class="footer mt-auto py-3" style="background-color: #2E5D34;">
         <p class="m-0 text-center text-white">The Django Smiths &copy; 2024 </p>
         <p class="m-0 text-center text-white">Follow us on social media: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
